@@ -4,6 +4,25 @@ A production-ready REST API for running a Secret Santa gift exchange. Built with
 
 ---
 
+## 🌐 Live Deployment & Quick Test
+
+The API is deployed and live on Render:
+- **Base URL**: `https://secret-santa-api-jpfb.onrender.com`
+- **Health Check**: [`https://secret-santa-api-jpfb.onrender.com/health`](https://secret-santa-api-jpfb.onrender.com/health)
+
+### Primary API Endpoints
+
+| Action | Method | Live Endpoint | Auth Required |
+|---|---|---|---|
+| **Health Check** | `GET` | `https://secret-santa-api-jpfb.onrender.com/health` | No |
+| **Register (Signup)** | `POST` | `https://secret-santa-api-jpfb.onrender.com/auth/signup` | No |
+| **Login** | `POST` | `https://secret-santa-api-jpfb.onrender.com/auth/login` | No |
+| **Get Participants** | `GET` | `https://secret-santa-api-jpfb.onrender.com/participants` | Bearer Token / Cookie |
+| **Run Draw (Admin)** | `POST` | `https://secret-santa-api-jpfb.onrender.com/draw/run` | Admin Bearer Token |
+| **My Assignment** | `GET` | `https://secret-santa-api-jpfb.onrender.com/participants/my-giftee` | Bearer Token / Cookie |
+
+---
+
 ## ✨ Features
 
 | Feature | Details |
@@ -58,9 +77,8 @@ The API will be available at `http://localhost:3000`.
 ## API Reference
 
 ### Base URL
-```
-http://localhost:3000
-```
+- **Production (Live)**: `https://secret-santa-api-jpfb.onrender.com`
+- **Local Development**: `http://localhost:3000`
 
 ### Auth
 
